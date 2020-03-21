@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 9</title>
+  <script>
+    function Sumar() {
+      var n1 = document.getElementById('txtN1').value;
+      var n2 = document.getElementById('txtN2').value;
+      var suma = parseInt(n1) + parseInt(n2);
+      alert('La suma es: ' + suma);
+    }
+  </script>
+</head>
+
+<body>
+  <fieldset>
+    <legend>Ingrese dos numeros</legend>
+    <label>Numero 1:</label>
+    <input type="text" id="txtN1">
+    <br><br>
+    <label>Numero 2:</label>
+    <input type="text" id="txtN2">
+    <br><br>
+    <button type="button" name="button" onclick="Sumar()">Calcular</button>
+  </fieldset>
+</body>
+
+</html>

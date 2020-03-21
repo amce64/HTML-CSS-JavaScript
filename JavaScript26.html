@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 26</title>
+  <script>
+    var hoy = new Date();
+    var mes = hoy.getMonth();
+    var mostrarMes = '';
+    switch (mes) {
+      case 0:
+        mostrarMes = 'Enero';
+        break;
+      case 1:
+        mostrarMes = 'Febrero';
+        break;
+      case 2:
+        mostrarMes = 'Marzo';
+        break;
+      case 3:
+        mostrarMes = 'Abril';
+        break;
+      case 4:
+        mostrarMes = 'Mayo';
+        break;
+      case 5:
+        mostrarMes = 'Junio';
+        break;
+      case 6:
+        mostrarMes = 'Julio';
+        break;
+      case 7:
+        mostrarMes = 'Agosto';
+        break;
+      case 8:
+        mostrarMes = 'Septiembre';
+        break;
+      case 9:
+        mostrarMes = 'Octubre';
+        break;
+      case 10:
+        mostrarMes = 'Noviembre';
+        break;
+      case 11:
+        mostrarMes = 'Diciembre';
+        break;
+      default:
+        mostrarMes = 'INVALIDO';
+    }
+    var horas = hoy.getHours();
+    var minutos = hoy.getMinutes();
+    var saludo;
+    var ampm;
+    if (horas <= 11) {
+      saludo = 'Buenos Días!';
+      ampm = 'a.m.';
+      if (horas == 0) {
+        horas = 12;
+      }
+    } else if (horas > 11 && horas < 18) {
+      saludo = 'Buenas tardes!';
+      ampm = 'p.m.';
+      if (horas > 12) {
+        horas -= 12;
+      }
+    } else if (horas > 17 && horas < 21) {
+      saludo = 'Buenas noches!';
+      ampm = 'p.m.';
+      horas -= 12;
+    } else if (horas > 20) {
+      saludo = 'Buenas noches! a descansar.';
+      ampm = 'p.m.';
+      horas -= 12;
+    }
+
+    if (minutos < 10) {
+      minutos = '0' + minutos;
+    }
+
+    document.writeln(saludo + '<br>');
+    document.writeln('Hoy es:<br>');
+    var mostrar = hoy.getDate() + ' ' + mostrarMes + '. ' + hoy.getYear() + ' - ' +
+      horas + ':' + minutos + ' ' + ampm;
+    document.writeln(mostrar);
+  </script>
+</head>
+
+<body>
+  <p>JavaScript ejecutado.</p>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 35</title>
+  <script>
+    var x = parseInt(prompt('Ingrese coordenadas x del punto:'));
+    var y = parseInt(prompt('Ingrese coordenadas y del punto:'));
+    if (x > 0 && y > 0) {
+      document.write('El punto se encuentra en el primer cuadrante.');
+    } else if (x < 0 && y > 0) {
+      document.write('El punto se encuentra en el segundo cuardante.');
+    } else if (x < 0 && y < 0) {
+      document.write('El punto se encuentra en el tercer cuadrante.');
+    } else if (x > 0 && y < 0) {
+      document.write('El punto se encuentra en el cuarto cuadrante.');
+    } else {
+      document.write('El punto se encuentra sobre un eje');
+    }
+  </script>
+</head>
+
+<body>
+  <p>JavaScript ejecutado.</p>
+</body>
+
+</html>

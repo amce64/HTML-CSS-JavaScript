@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicio 36</title>
+  <script>
+    var sueldo = parseInt(prompt('Ingrese el sueldo del empleado:'));
+    var antiguedad = parseInt(prompt('Ingrese antiguedad del empleado:'));
+    if (sueldo < 500 && antiguedad >= 10) {
+      document.write('Se le otorga un aumento del 20%.<br>');
+      sueldo = sueldo + sueldo * 0.20;
+    } else if (sueldo < 500 && antiguedad < 10) {
+      document.write('Se le otorga un aumento del 5%.<br>');
+      sueldo = sueldo + sueldo * 0.05;
+    } else {
+      document.write('El sueldo queda sin cambios:<br>');
+    }
+
+    document.write('El sueldo total es: ' + sueldo);
+  </script>
+</head>
+
+<body>
+  <p>JavaScript ejecutado.</p>
+</body>
+
+</html>
